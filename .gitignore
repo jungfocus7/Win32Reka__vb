@@ -3,4 +3,10 @@
 /\#\#RELEASE
 /.vs
 /packages
-/WV2FASTGRID__vb\obj
+/[ TESTERS ]\__CustomMaker\bin
+/[ TESTERS ]\__CustomMaker\obj
+/[ TESTERS ]\ConsoleApp1\bin
+/[ TESTERS ]\ConsoleApp1\obj
+/[ TESTERS ]\ConsoleApp2__vb\bin
+/[ TESTERS ]\ConsoleApp2__vb\obj
+/[ TESTERS ]\TesterConsole31\Debug
