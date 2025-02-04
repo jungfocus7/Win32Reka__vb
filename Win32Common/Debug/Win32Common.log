@@ -1,6 +1,0 @@
-﻿  pch.cpp
-  dllmain.cpp
-     ..\##Debug\Win32Common.lib 라이브러리 및 ..\##Debug\Win32Common.exp 개체를 생성하고 있습니다.
-  Win32Common.vcxproj -> D:\81)MFC_PRJS\Win32Reka__vb\Win32Common\..\##Debug\Win32Common.dll
-  'pwsh.exe'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
-  배치 파일이 아닙니다.
