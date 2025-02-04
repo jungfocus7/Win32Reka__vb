@@ -1,0 +1,20 @@
+$(SolutionDir)##$(Configuration)\$(ProjectName)\$(Platform)\
+$(SolutionDir)##$(Configuration)\$(ProjectName)\_objout\$(Platform)\
+
+
+
+$(SolutionDir)
+##$(Configuration)\
+$(ProjectName)\
+_objout\
+$(Platform)\
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+DWORD, HWND
+
+
+
+dwStyle = GetWindowLongA(hWndCurrent, GWL_STYLE);
+hWndNext = GetParent(hWndCurrent);

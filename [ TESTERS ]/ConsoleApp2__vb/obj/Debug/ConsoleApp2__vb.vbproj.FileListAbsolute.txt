@@ -1,0 +1,11 @@
+D:\81)MFC_PRJS\Win32Reka__vb\[ TESTERS ]\ConsoleApp2__vb\bin\Debug\ConsoleApp2__vb.exe.config
+D:\81)MFC_PRJS\Win32Reka__vb\[ TESTERS ]\ConsoleApp2__vb\bin\Debug\ConsoleApp2__vb.exe
+D:\81)MFC_PRJS\Win32Reka__vb\[ TESTERS ]\ConsoleApp2__vb\bin\Debug\ConsoleApp2__vb.pdb
+D:\81)MFC_PRJS\Win32Reka__vb\[ TESTERS ]\ConsoleApp2__vb\bin\Debug\ConsoleApp2__vb.xml
+D:\81)MFC_PRJS\Win32Reka__vb\[ TESTERS ]\ConsoleApp2__vb\obj\Debug\ConsoleApp2__vb.vbprojAssemblyReference.cache
+D:\81)MFC_PRJS\Win32Reka__vb\[ TESTERS ]\ConsoleApp2__vb\obj\Debug\ConsoleApp2__vb.Resources.resources
+D:\81)MFC_PRJS\Win32Reka__vb\[ TESTERS ]\ConsoleApp2__vb\obj\Debug\ConsoleApp2__vb.vbproj.GenerateResource.cache
+D:\81)MFC_PRJS\Win32Reka__vb\[ TESTERS ]\ConsoleApp2__vb\obj\Debug\ConsoleApp2__vb.vbproj.CoreCompileInputs.cache
+D:\81)MFC_PRJS\Win32Reka__vb\[ TESTERS ]\ConsoleApp2__vb\obj\Debug\ConsoleApp2__vb.exe
+D:\81)MFC_PRJS\Win32Reka__vb\[ TESTERS ]\ConsoleApp2__vb\obj\Debug\ConsoleApp2__vb.xml
+D:\81)MFC_PRJS\Win32Reka__vb\[ TESTERS ]\ConsoleApp2__vb\obj\Debug\ConsoleApp2__vb.pdb

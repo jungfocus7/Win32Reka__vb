@@ -1,0 +1,12 @@
+D:\81)MFC_PRJS\Win32Reka__vb\##Debug\__CustomMaker.exe.config
+D:\81)MFC_PRJS\Win32Reka__vb\##Debug\__CustomMaker.exe
+D:\81)MFC_PRJS\Win32Reka__vb\##Debug\__CustomMaker.pdb
+D:\81)MFC_PRJS\Win32Reka__vb\##Debug\__CustomMaker.xml
+D:\81)MFC_PRJS\Win32Reka__vb\[ TESTERS ]\__CustomMaker\obj\Debug\__CustomMaker.MakerForm.resources
+D:\81)MFC_PRJS\Win32Reka__vb\[ TESTERS ]\__CustomMaker\obj\Debug\__CustomMaker.Resources.resources
+D:\81)MFC_PRJS\Win32Reka__vb\[ TESTERS ]\__CustomMaker\obj\Debug\__CustomMaker.vbproj.GenerateResource.cache
+D:\81)MFC_PRJS\Win32Reka__vb\[ TESTERS ]\__CustomMaker\obj\Debug\__CustomMaker.vbproj.CoreCompileInputs.cache
+D:\81)MFC_PRJS\Win32Reka__vb\[ TESTERS ]\__CustomMaker\obj\Debug\__CustomMaker.exe
+D:\81)MFC_PRJS\Win32Reka__vb\[ TESTERS ]\__CustomMaker\obj\Debug\__CustomMaker.xml
+D:\81)MFC_PRJS\Win32Reka__vb\[ TESTERS ]\__CustomMaker\obj\Debug\__CustomMaker.pdb
+D:\81)MFC_PRJS\Win32Reka__vb\[ TESTERS ]\__CustomMaker\obj\Debug\__CustomMaker.vbprojAssemblyReference.cache

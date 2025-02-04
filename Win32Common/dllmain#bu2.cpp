@@ -1,0 +1,246 @@
+﻿#include "pch.h"
+
+
+
+#pragma region ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~1
+HHOOK g_hHook = nullptr;
+LRESULT CALLBACK fn_HookProc(int nCode, WPARAM wParam, LPARAM lParam)
+{
+	if (nCode == HCBT_CREATEWND)
+	{
+		LPCBT_CREATEWND lpcWnd = (LPCBT_CREATEWND)lParam;
+		LPCREATESTRUCTA lpcs = lpcWnd->lpcs;
+
+		if (lpcs->lpszClass == (LPCSTR)(ATOM)32770)  // #32770 = dialog box class
+		{
+			RECT rcp{ };
+			GetWindowRect(lpcs->hwndParent, &rcp);
+			lpcs->x = rcp.left + ((rcp.right - rcp.left) - lpcs->cx) / 2;
+			lpcs->y = rcp.top + ((rcp.bottom - rcp.top) - lpcs->cy) / 2;
+		}
+	}
+
+	LRESULT lrs = CallNextHookEx(g_hHook, nCode, wParam, lParam);
+	return lrs;
+}
+
+
+EXPORTED_METHOD int WINAPI fn_MessageBox(HWND hWnd, LPCSTR lpText, LPCSTR lpCaption, UINT uType)
+{
+	const DWORD dwThreadId = GetCurrentThreadId();
+	g_hHook = SetWindowsHookExA(WH_CBT, fn_HookProc, nullptr, dwThreadId);
+
+	int nRes = MessageBoxExA(hWnd, lpText, lpCaption, uType, 0);
+	UnhookWindowsHookEx(g_hHook);
+
+	return nRes;
+}
+#pragma endregion
+
+
+
+#pragma region ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~2
+constexpr size_t g_bsz256 = 256;
+constexpr size_t g_bsz512 = 512;
+struct WNDINFO
+{
+	HINSTANCE hInstance;
+	HWND hWnd;
+	CHAR lpszClassName[g_bsz256];
+	CHAR lpszProcessName[g_bsz256];
+	DWORD dwStyle;
+	DWORD dwExStyle;
+	CHAR lpszCaption[g_bsz512];
+	BYTE uOpacity;
+	INT nLeft;
+	INT nTop;
+	INT nWidth;
+	INT nHeight;
+	BOOL bMinimizeBox;
+	BOOL bMaximizeBox;
+	BOOL bResizable;
+	BOOL bTopMost;
+};
+
+HWND fn_FindWindowHandle(HWND hWnd)
+{
+	if (hWnd == nullptr) return nullptr;
+
+	HWND hWndCurrent = hWnd;
+	HWND hWndNext = nullptr;
+	while (true)
+	{
+		if (IsWindow(hWndCurrent))
+		{
+			break;
+		}
+
+		hWndNext = GetParent(hWndCurrent);
+		if (hWndNext == nullptr)
+		{
+			break;
+		}
+		else
+		{
+			hWndCurrent = hWndNext;
+		}
+	}
+
+	return hWndCurrent;
+}
+
+bool fn_GetProcessName(HWND hWnd, WNDINFO* pWndInfo)
+{
+	DWORD dwProcessId;
+	DWORD dwResult = GetWindowThreadProcessId(hWnd, &dwProcessId);
+	if (dwResult == 0)
+	{
+		return false;
+	}
+
+	HANDLE hProcess = OpenProcess(PROCESS_QUERY_INFORMATION, FALSE, dwProcessId);
+	if (hProcess == nullptr)
+	{
+		return false;
+	}
+
+	LPSTR lpExeName = pWndInfo->lpszProcessName;
+	DWORD dwSize = g_bsz256;
+	bool bOk = QueryFullProcessImageNameA(hProcess, 0, lpExeName, &dwSize);
+	bool bResult = false;
+	if (bOk)
+	{
+		LPSTR lps1 = PathFindFileNameA(lpExeName);
+		strcpy_s(lpExeName, g_bsz256, lps1);
+		bResult = true;
+	}
+
+	CloseHandle(hProcess);
+	return bResult;
+}
+
+bool fn_GetAllStyles(HWND hWnd, WNDINFO* pWndInfo)
+{
+	pWndInfo->dwStyle = GetWindowLongA(hWnd, GWL_STYLE);	
+	DWORD dwExStyle = GetWindowLongA(hWnd, GWL_EXSTYLE);
+	if ((dwExStyle & WS_EX_LAYERED) != WS_EX_LAYERED)
+	{
+		LONG dwNewExStyle = dwExStyle | WS_EX_LAYERED;
+		SetWindowLongA(hWnd, GWL_EXSTYLE, dwNewExStyle);
+		dwExStyle = dwNewExStyle;
+	}
+	pWndInfo->dwExStyle = GetWindowLongA(hWnd, GWL_EXSTYLE);
+
+	return true;
+}
+
+bool fn_GetCaptionText(HWND hWnd, WNDINFO* pWndInfo)
+{
+	int nLen = GetWindowTextLengthA(hWnd);
+	if (nLen > 0)
+	{
+		GetWindowTextA(hWnd, pWndInfo->lpszCaption, g_bsz512);
+		return true;
+	}
+
+	return false;
+}
+
+bool fn_GetOpacityValue(HWND hWnd, WNDINFO* pWndInfo)
+{
+	//LONG dwExStyle = GetWindowLongA(hWnd, GWL_EXSTYLE);
+	//if ((dwExStyle & WS_EX_LAYERED) != WS_EX_LAYERED)
+	//{
+	//	LONG dwNewExStyle = dwExStyle | WS_EX_LAYERED;
+	//	SetWindowLongA(hWnd, GWL_EXSTYLE, dwNewExStyle);
+	//}
+	//auto x0 = SetLayeredWindowAttributes(hWnd, 0, 35, LWA_ALPHA);
+
+	COLORREF crKey{ }; BYTE btAlpha{ }; DWORD dwFlags{ };
+	bool bResult = GetLayeredWindowAttributes(hWnd, &crKey, &btAlpha, &dwFlags);
+	if (bResult)
+	{
+		pWndInfo->uOpacity = btAlpha;
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+bool fn_GetWindowRect(HWND hWnd, WNDINFO* pWndInfo)
+{
+	RECT rt{ };
+	bool bResult = GetWindowRect(hWnd, &rt);
+	if (bResult)
+	{
+		pWndInfo->nLeft = rt.left;
+		pWndInfo->nTop = rt.top;
+		pWndInfo->nWidth = rt.right - rt.left;
+		pWndInfo->nHeight = rt.bottom - rt.top;
+		return true;
+	}
+
+	return false;
+}
+
+bool fn_GetOtherInfo(HWND hWnd, WNDINFO* pWndInfo)
+{
+	DWORD dwStyle = pWndInfo->dwStyle;
+	DWORD dwExStyle = pWndInfo->dwExStyle;
+
+	pWndInfo->bMinimizeBox = (dwStyle & WS_MINIMIZEBOX) == WS_MINIMIZEBOX;
+	pWndInfo->bMaximizeBox = (dwStyle & WS_MAXIMIZEBOX) == WS_MAXIMIZEBOX;
+	pWndInfo->bResizable = (dwStyle & WS_THICKFRAME) == WS_THICKFRAME;
+	pWndInfo->bTopMost = (dwExStyle & WS_EX_TOPMOST) == WS_EX_TOPMOST;
+
+	return true;
+}
+
+//EXPORTED_METHOD bool WINAPI fn_WorkRoll(/*HWND hWndBegin, */WNDINFO* pWndInfo)
+EXPORTED_METHOD bool WINAPI fn_WorkRoll(LONG nx, LONG ny, WNDINFO* pWndInfo)
+{
+	POINT pt{ nx, ny };
+	HWND hWndBegin = WindowFromPoint(pt);
+	HWND hWndTarget = fn_FindWindowHandle(hWndBegin);
+
+	memset(pWndInfo, 0, sizeof(WNDINFO));
+	pWndInfo->hInstance = (HINSTANCE)GetWindowLongA(hWndTarget, GWL_HINSTANCE);
+	pWndInfo->hWnd = hWndTarget;
+	GetClassNameA(hWndTarget, pWndInfo->lpszClassName, g_bsz256);
+	fn_GetProcessName(hWndTarget, pWndInfo);
+	pWndInfo->dwStyle = GetWindowLongA(hWndTarget, GWL_STYLE);
+	pWndInfo->dwExStyle = GetWindowLongA(hWndTarget, GWL_EXSTYLE);
+	//LONG dwExStyle = GetWindowLongA(hWnd, GWL_EXSTYLE);
+	//if ((dwExStyle & WS_EX_LAYERED) != WS_EX_LAYERED)
+	//{
+	//	LONG dwNewExStyle = dwExStyle | WS_EX_LAYERED;
+	//	SetWindowLongA(hWnd, GWL_EXSTYLE, dwNewExStyle);
+	//}
+	fn_GetCaptionText(hWndTarget, pWndInfo);
+	fn_GetOpacityValue(hWndTarget, pWndInfo);
+	fn_GetWindowRect(hWndTarget, pWndInfo);
+	fn_GetOtherInfo(hWndTarget, pWndInfo);
+
+	return true;
+}
+
+EXPORTED_METHOD bool WINAPI fn_UpdateRoll(HWND hWndTarget, WNDINFO* pWndInfo)
+{
+	memset(pWndInfo, 0, sizeof(WNDINFO));
+
+	pWndInfo->hInstance = (HINSTANCE)GetWindowLongA(hWndTarget, GWL_HINSTANCE);
+	pWndInfo->hWnd = hWndTarget;
+	GetClassNameA(hWndTarget, pWndInfo->lpszClassName, g_bsz256);
+	fn_GetProcessName(hWndTarget, pWndInfo);
+	pWndInfo->dwStyle = GetWindowLongA(hWndTarget, GWL_STYLE);
+	pWndInfo->dwExStyle = GetWindowLongA(hWndTarget, GWL_EXSTYLE);
+	fn_GetCaptionText(hWndTarget, pWndInfo);
+	fn_GetOpacityValue(hWndTarget, pWndInfo);
+	fn_GetWindowRect(hWndTarget, pWndInfo);
+	fn_GetOtherInfo(hWndTarget, pWndInfo);
+
+	return true;
+}
+#pragma endregion
