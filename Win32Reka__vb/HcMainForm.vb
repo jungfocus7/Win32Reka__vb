@@ -111,9 +111,24 @@ Public NotInheritable Class HcMainForm
                 End Sub
         })
 
+
         AddHandler FormClosing,
             Sub(sd As Object, ea As FormClosingEventArgs)
                 HcHotkeyHelper.ClearAllHotkey()
+            End Sub
+
+        AddHandler Deactivate,
+            Sub(sd As Object, ea As EventArgs)
+                'Debug.WriteLine("~~~Deactivate")
+                HcHotkeyHelper.SetEnabled(False)
+                'Enabled = False
+            End Sub
+
+        AddHandler Activated,
+            Sub(sd As Object, ea As EventArgs)
+                'Debug.WriteLine("~~~Activated")
+                HcHotkeyHelper.SetEnabled(True)
+                'Enabled = True
             End Sub
     End Sub
 
