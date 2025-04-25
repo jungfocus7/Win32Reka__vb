@@ -1,0 +1,544 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="m_txb31.Text" xml:space="preserve">
+    <value>
+
+KR
+
+탐색 건너뛰기
+검색
+
+
+
+
+
+아바타 이미지
+
+
+
+4:03 / 21:22
+
+
+러시아 입장에서 바라본 이번 전쟁의 진짜 원인은? #박정호교수 #여의도멘션 #러시아 #푸틴
+
+박정호 교수의 여의도멘션
+구독자 16.4만명
+
+구독
+
+1.3천
+
+
+공유
+
+오프라인 저장
+
+Thanks
+
+클립
+
+조회수 3.7만회  1일 전
+#박정호교수 #여의도멘션 #이란 #중동
+
+📌 "박정호 교수의 여의도멘션" 프리미엄콘텐츠를 만나보세요 …
+댓글 146개
+xxx yy
+푸틴은 러시아의 영웅같은 존재인데...
+너무 마녀사
+
+
+취소
+
+댓글
+
+박정호 교수의 여의도멘션님이 고정함
+@Prof.Park_Yeouidomention
+1일 전
+#박정호교수 #여의도멘션 #이란 #중동
+
+📌 "박정호 교수의 여의도멘션" 프리미엄콘텐츠를 만나보세요
+https://contents.premium.naver.com/profparkyeouidomention/profpark
+
+★ 푸틴의 진짜 목표는 유라시아 지역이다 ① ★
+
+ 명지대학교 &lt;2025학년도 전기 테크노아트대학원 신(편)입생 모집&gt;
+원서 접수하기 https://www.jinhakapply.com
+
+
+ &lt;2025 성공을 위한 재테크쇼&gt;
+
+■ 일시 : 2024. 12. 7. (토) 12:00~17:30
+
+■ 장소 : 논현2문화센터 7층 대강당 
+             (서울 강남구 학동로43길 17,  강남구청역 3번출구 도보 5분)
+
+■ 일정 : 
+1부 (12:00~14:00) 
+- 이성재 교수 (베프옥션 아카데미 대표, 동서울대 겸임교수)
+- 주제 : 변동성 심한 시장상황에도 통하는, 경매 성공사례와 시세상승의 비밀
+
+2부 (14:15~16:15)
+- 박정호 교수 (한국경제산업연구원 부원장, 명지대 산업대학원 교수)
+- 주제 : 2025년 도래할 집값 흐름의 변화와 미래 투자 유망지 분석
+
+3부 (16:30~17:30)
+- Q&amp;A 
+
+■ 기타 안내
+※ 250명 한정(입금순) 모집합니다.
+※ 주차지원이 불가합니다. 대중교통을 이용해 주시기 바랍니다.
+
+
+ [신청하기] &lt;2025 성공을 위한 재테크쇼&gt;
+https://forms.gle/aVV4vDLcwPbhHBfN7
+-----------------------------------------------------------------------
+광고 · 협찬문의 junghopark0430@gmail.com
+-----------------------------------------------------------------------
+
+16
+
+
+답글
+
+
+@Honey_Fun_Economic_Lab
+1일 전
+흥미롭네요 ㅎㅎ
+
+17
+
+
+답글
+
+
+@Sweet_mom2016
+1일 전
+오늘도 감사합니다!
+
+16
+
+
+
+답글
+
+
+@Andrew_OTG
+1일 전
+날씨가 많이 추워졌어요 ㅠㅠ 감기 조심하십시오^^
+
+14
+
+
+
+답글
+
+
+@mightyYeo
+1일 전
+오바마 크림반도 먹힐 땐 먼 산 쳐다보고 있었잖아.ㅋ
+
+13
+
+
+답글
+
+
+@user-qu4rg7xi5y
+1일 전
+대한민국 사람들도 여러 시각으로 세상을 볼 수 있어야 합니다. 박정호 교수님 덕에 다양한 시각으로 세계를 보는 분들이 많아져 다행입니다.
+
+22
+
+
+
+답글
+
+@FMEC
+1일 전
+오~ 오랜만에 러시아 얘기네요! 잘 볼게요!!
+
+22
+
+
+
+답글
+
+@바람꽃-s1p
+1일 전
+EU 가입하려면 나라 전체를 갈아 엎는 개혁을 해야 함. 모든 국가 시스템을 EU 기준에 맞추어야 함. 우크라 같은 부패 국가는 하늘이 두쪽나도 가입할 수 없음. 젤렌스키의 선동이었을 뿐..지금 EU에 가입된 회원국 중에도 무비자 혜택이 주어지지 않는 나라들도 있음. 가입하기도 어렵지만, 회원국이라고 다 같은 회원국이 아님.
+
+16
+
+
+답글
+
+
+답글 1개
+@검방패
+1일 전
+교수님 당연히 하시겠지만 오늘 미국 대통령 좀
+
+12
+
+
+
+답글
+
+@dolphy8678
+1일 전
+한국 드라마 너무 많이 보셨다. 어떻게 거기서 끊어요?
+
+6
+
+
+
+답글
+
+@식빵집사-n4c
+1일 전
+1945년 8월15일 해방되었을 때 유행했던 말
+"소련에 속지 말고 미국 믿지 마라. 일본놈은 일어선다."
+살아보니 이 말이 맞았습니다.
+
+23
+
+
+답글
+
+@jungtkim7466
+1일 전
+일본 빠는 우크라이나 일본대사ㅋㅋ 그냥 한쪽 편을 들지말고 러시아 말도 들어보자
+
+17
+
+
+답글
+
+@kasasagi-kun
+4시간 전
+제목 보고 반해서 들어왔습니다
+남들이 다 비난할지라도 객관적인 시선을 알려주시니 감사할 따름입니다
+
+1
+
+
+
+답글
+
+@walkingholiday498
+22시간 전
+우크라이나 국경에서 모스크바 까지 500km. 미국의 전략무기가 자기집 앞마당에 깔리면 러시아는 경기를 일으킬수 밖에 없죠. 소련시절 소련이 쿠바에 미사일 배치하려하니, 미국이 경기 일으키면서 핵전쟁 직전까지 갔던거 생각하면, 동진하는 나토를 보면서 꾹 참아온 러시아가 정말 부처님 처럼 많이 참았던 거임.
+
+6
+
+
+답글
+
+@총균쇠-n1b
+1일 전
+이런말이 있습니다. 
+
+러시아 는 과거로부터 지정학적 리스크를 가진 거대한 영토의 비극? 이라 합니다. 
+다시말해 광활한 평지로 이루어진 지형이 대부분 으로 방어를 하는 입장 에서는 주변의 나라들이 어느정도 완충역활을 해 줘야 하는데. 
+러시아 입장 에서는 나토 회원국의 앞마당 까지 밀고 들어오는 위협에 지금의 우크라이나 전쟁을 일으킨 주요 원인 중 하나 라는 주장이 있습니다
+
+7
+
+
+답글
+
+
+답글 4개
+@식빵집사-n4c
+1일 전
+우리나라 쓰레기 언론들과 윤석열 정부,  해리스 당선에 올인하다시피 했는데 이젠 우짤꼬? 궁금합니다.
+
+18
+
+
+
+답글
+
+@대한민국-k3j
+1일 전
+박정호 교수 개쩐다 ...저기 명지대 대학원 가고싶을정도......
+
+18
+
+
+
+답글
+
+@blanche1813
+1일 전
+애청자입니다. 재밌게 듣고 있는데 문득 두분 앞에 있는 농구공은 어떤 여유로 있는 건지 궁금하네요 두분 손 심심하지 않아서 안정감이 있긴 한 것 같아요
+
+13
+
+
+답글
+
+
+·
+
+답글 1개
+@byunghyunhbh4903
+1일 전
+노란 농구공 어서팔아요?
+
+10
+
+
+답글
+
+@부영-c6q
+1일 전
+핑개 없는 무덤은 없땅 ^^무어시 부족 해냐  세상을 다 얻을 지라도 목숨 하나 잃으면 무익하당! 도살자 ^ 흡혈귀 ️피로  배부를 뿐^^
+
+8
+
+
+답글
+
+
+15:04
+지금 재생 중
+북한군 1만명 파병된 러시아 · 우크라이나 전쟁, 한국인 99%가 잘못 알고 있다 (조한범 박사)
+김작가 TV
+조회수 19만회 5일 전
+새 동영상
+
+
+1:33:02
+지금 재생 중
+북한과 전쟁 터지면 들통난다, 북한이 숨긴 군사력의 충격적 실체 (문근식 교수 풀버전)
+김작가 TV
+조회수 277만회 8개월 전
+
+
+1:01:57
+지금 재생 중
+무궁무진한 AI 어디까지 알고 있니? f. 한빛미디어 박태웅 의장 [심층 인터뷰]
+삼프로TV 3PROTV
+조회수 28만회 6개월 전
+
+
+2:11:18
+지금 재생 중
+(2시간) [군대 읽어드립니다] 론칭 프리퀄! 진주만 공습부터 히로시마 원자폭탄까지!! 몰아보기
+사피엔스 스튜디오
+조회수 7.4만회 3주 전
+
+
+16:35
+지금 재생 중
+💣[러시아 vs 우크라이나] 외신 언론 보도 비교하기! | 조핑턴포스트
+조승연의 탐구생활
+조회수 315만회 2년 전
+
+
+1:46:07
+지금 재생 중
+(100분) 한순간에 바뀌는 화폐 가치💸 전 세계를 혼란에 빠트린 세계사 속 경제 대공황 | 벌거벗은세계사
+tvN
+조회수 124만회 5개월 전
+
+
+18:54
+지금 재생 중
+한국이 숨겨둔 세계 1등 무기, 북한 김정은 제거도 시간 문제다 (전인범 장군)
+김작가 TV
+조회수 4.5만회 6시간 전
+새 동영상
+
+
+31:06
+지금 재생 중
+30분이면 북한 초토화! 현존 세계 최강 미사일 '현무-5' 위력은 (샤를세환) | 인포맥스라이브 20241010
+연합뉴스경제TV
+조회수 198만회 3주 전
+
+
+58:21
+지금 재생 중
+북한 내부가 많이 달라졌습니다 f.조한범 통일연구원 석좌연구위원
+삼프로TV 3PROTV
+조회수 41만회 1개월 전
+
+
+1:10:20
+지금 재생 중
+당신이 생각하는 트럼프는 모두 거짓입니다 (서울시립대학교 송의달 교수)
+언더스탠딩 : 세상의 모든 지식
+조회수 5.8만회 4시간 전
+새 동영상
+
+
+3:15:26
+지금 재생 중
+[몰아보기] 강성용의 남아시아 인사이드 (인도) 11~15화
+삼프로TV 3PROTV
+조회수 176만회 1년 전
+
+
+24:10
+지금 재생 중
+드디어 끝이 보이는 러시아 · 우크라이나 전쟁, 곧 전세계 지각변동 일어난다 (조한범 박사)
+김작가 TV
+조회수 57만회 6일 전
+새 동영상
+
+
+58:07
+지금 재생 중
+중국 대신 러시아와 손 잡은 김정은, 속내는? f.조한범 통일연구원 석좌연구위원 [심층인터뷰]
+삼프로TV 3PROTV
+조회수 58만회 1개월 전
+
+수천명 전사자는 시간 문제. 이번 만명 파병으로 끝나지 않는다 (조한범 위원) | 인포맥스라이브 20241028
+연합뉴스경제TV
+조회수 17만회 10일 전
+
+'한국은 떼돈 벌 일만 남았다', 세계 1위 부자가 한국 선택한 이유 (박정호 교수 풀버전)
+김작가 TV
+조회수 157만회 1년 전
+
+[몰아보기] 이슬람의 진짜 모습을 알아보는 시간 [더 릴리전 이슬람교] f.박현도 서강대학교 유로메나연구소 교수
+삼프로TV 3PROTV
+조회수 69만회 1개월 전
+
+한반도 위기+우크라 전쟁? 재앙의 시작... f.이문영 서울대학교 통일평화연구원 교수 [신과대화]
+삼프로TV 3PROTV
+조회수 33만회 12일 전
+
+[홍사훈쑈] 김건희, 이종호 권오수와 함께 블랙펄 패밀리였다ㅣ최강욱 전 의원 &amp; 조수진 변호사ㅣ 2024년 9월 30일 월요일
+김어준의 겸손은힘들다 뉴스공장
+조회수 30만회 스트리밍 시간: 1개월 전
+
+2023 미국의 한국 도청, 무엇이 사실인가? - 뉴스타파
+뉴스타파 Newstapa
+조회수 32만회 8일 전
+
+하마스의 역사를 보면 중동전쟁이 보인다 (서강대학교 유로메나연구소 박현도 교수)
+언더스탠딩 : 세상의 모든 지식
+조회수 72만회 1년 전
+</value>
+  </data>
+</root>
